@@ -1,0 +1,47 @@
+ENV: DEVELOPMENT
+VERSION: 1.0.0
+ENABLE: True
+DEFAULT:
+  ALLOWED_HOSTS:
+    - "https://dev-product.zepptalentz.com"
+    - "*"
+  PORT: 9015
+  HOST: "0.0.0.0"
+  LOGGING_SUCCESS_FILENAME: "access.log"
+  LOGGING_ERROR_FILENAME: "error.log"
+  LOGGING_FORMAT: "<level>{level: <8}</level> <green>{time:YYYY-MM-DD HH:mm:ss.SSS}</green> request id: {extra[request_id]} - <cyan>{name}</cyan>:<cyan>{function}</cyan> - <level>{message}</level>"
+  LOGGER_FORMAT: "%(asctime)s — %(name)s — %(levelname)s — %(funcName)s:%(lineno)d — %(message)s"
+  LANGUAGE_CODE: "en-us"
+  TIME_ZONE: "UTC"
+
+DEVELOPMENT:
+  LOGGING:
+    LOGGERS_DEFAULT_LEVEL: DEBUG
+  DATABASES:
+    DB_ENGINE: "mongodb"
+    DB_HOST: "172.18.0.2"
+    DB_PORT: 27017
+    DB_USERNAME: ""
+    DB_PASSWORD: ""
+    DB_NAME: "parsed_resume"
+  API_KEY:
+      GOOGLE_API_KEY: AIzaSyDrfjH-32o0K0o-y2TaG7asV_Y93I8Mr_4
+PRODUCTION:
+  LOGGING:
+    LOGGERS_DEFAULT_LEVEL: ERROR
+  DATABASES:
+    DB_ENGINE: "mongodb"
+    DB_HOST: "tz-dev-docdb.cluster-cwgf4xjyujk9.us-east-1.docdb.amazonaws.com"
+    DB_PORT: 27017
+    DB_USERNAME: "dev_admin_usr"
+    DB_PASSWORD: "##KsdjKKLkds*343"
+    DB_NAME: "simplifyvmsAI"
+    TABLE_NAME: "parsed_resume"
+    DB_CLUSTERIDENTIFIER: ""
+    SSL: True
+    SSL_CERT: ""
+  API_KEY:
+    GOOGLE_API_KEY: AIzaSyDrfjH-32o0K0o-y2TaG7asV_Y93I8Mr_4
+  AWS:
+    AWS_REGION: us-east-1
+    AWS_SECRET_NAME: "ai/locationapi"

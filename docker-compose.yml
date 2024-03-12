@@ -1,0 +1,11 @@
+version: "3.3"
+services:
+  location_server:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    restart: on-failure    
+    expose:
+      - "3000"
+    ports:
+      - "3000:3000"
