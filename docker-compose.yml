@@ -3,9 +3,9 @@ services:
   location_server:
     build:
       context: .
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile
     restart: on-failure    
     expose:
-      - "3000"
+      - "9015"
     ports:
-      - "3000:3000"
+      - "9015:9015"
