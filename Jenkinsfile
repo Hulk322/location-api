@@ -1,14 +1,14 @@
 pipeline{
     agent any
-    stages("hello"){
-        stage{
+    stages{
+        stage("code clone"){
             steps{
 
             }
         }
         stage{
             steps{
-                
+
             }
         }
     }
