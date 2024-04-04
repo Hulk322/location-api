@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage("code clone"){
             steps{
-
+                echo "code clone"
             }
         }
         stage("build"){
